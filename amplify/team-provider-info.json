@@ -1,0 +1,31 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nodejsdemo-staging-163152-authRole",
+      "UnauthRoleArn": "arn:aws:iam::711033550103:role/amplify-nodejsdemo-staging-163152-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::711033550103:role/amplify-nodejsdemo-staging-163152-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nodejsdemo-staging-163152-deployment",
+      "UnauthRoleName": "amplify-nodejsdemo-staging-163152-unauthRole",
+      "StackName": "amplify-nodejsdemo-staging-163152",
+      "StackId": "arn:aws:cloudformation:us-east-1:711033550103:stack/amplify-nodejsdemo-staging-163152/4a2dbf00-0c37-11ed-812a-0a94b02ce739",
+      "AmplifyAppId": "d1tchpaxw3ep7q"
+    },
+    "categories": {
+      "function": {
+        "nodejsdemocdb2413c": {
+          "deploymentBucketName": "amplify-nodejsdemo-staging-163152-deployment",
+          "s3Key": "amplify-builds/nodejsdemocdb2413c-527244734e3143636b70-build.zip"
+        },
+        "nodejsdemo25e10e0f": {
+          "deploymentBucketName": "amplify-nodejsdemo-staging-163152-deployment",
+          "s3Key": "amplify-builds/nodejsdemo25e10e0f-4f6232742b536f6e452b-build.zip"
+        },
+        "nodejsdemoc49a67e7": {
+          "deploymentBucketName": "amplify-nodejsdemo-staging-163152-deployment",
+          "s3Key": "amplify-builds/nodejsdemoc49a67e7-69526931382b56615075-build.zip"
+        }
+      }
+    }
+  }
+}

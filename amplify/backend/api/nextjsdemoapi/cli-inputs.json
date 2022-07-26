@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "paths": {
+    "/users": {
+      "name": "/users",
+      "lambdaFunction": "nodejsdemoc49a67e7",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/customers": {
+      "name": "/customers",
+      "lambdaFunction": "nodejsdemocdb2413c",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/vendors": {
+      "name": "/vendors",
+      "lambdaFunction": "nodejsdemo25e10e0f",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
