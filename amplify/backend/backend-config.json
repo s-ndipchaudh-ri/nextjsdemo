@@ -28,22 +28,6 @@
             "Name",
             "Arn"
           ]
-        },
-        {
-          "category": "function",
-          "resourceName": "nodejsdemocdb2413c",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "nodejsdemo25e10e0f",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
         }
       ]
     }

@@ -23,7 +23,7 @@
         },
         "nodejsdemoc49a67e7": {
           "deploymentBucketName": "amplify-nodejsdemo-staging-163152-deployment",
-          "s3Key": "amplify-builds/nodejsdemoc49a67e7-69526931382b56615075-build.zip"
+          "s3Key": "amplify-builds/nodejsdemoc49a67e7-506e2b5a6f7677574b79-build.zip"
         }
       }
     }

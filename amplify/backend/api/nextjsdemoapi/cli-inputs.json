@@ -10,14 +10,14 @@
     },
     "/customers": {
       "name": "/customers",
-      "lambdaFunction": "nodejsdemocdb2413c",
+      "lambdaFunction": "nodejsdemoc49a67e7",
       "permissions": {
         "setting": "open"
       }
     },
     "/vendors": {
       "name": "/vendors",
-      "lambdaFunction": "nodejsdemo25e10e0f",
+      "lambdaFunction": "nodejsdemoc49a67e7",
       "permissions": {
         "setting": "open"
       }

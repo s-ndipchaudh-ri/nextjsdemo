@@ -7,8 +7,9 @@ const vendor = require('./vendor')
 const user = require('./user')
 
 //define routes
-app.use('/customers',customer)
+app.use('/owners',customer)
 app.use('/vendors',vendor)
+app.use('/customers',customer)
 app.use('/users',user)
 
 

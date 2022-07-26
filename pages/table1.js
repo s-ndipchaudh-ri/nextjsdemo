@@ -12,7 +12,13 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 
-export default function BasicTable({customers}) {
+export default function BasicTable() {
+  let [customers,setCustomers] = React.useState([])
+  React.useEffect(async ()=>{
+    let res = await axios.get(`https://ch91r1yrg3.execute-api.us-east-1.amazonaws.com/staging/customers`)
+    // setCustomers(customer => [...customer])
+  },[])
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -42,13 +48,4 @@ export default function BasicTable({customers}) {
       </Table>
     </TableContainer>
   );
-}
-
-export async function getStaticProps(){
-  let res = await axios.get(`https://ch91r1yrg3.execute-api.us-east-1.amazonaws.com/staging/customers`)
-  return {
-    props : {
-      customers : res.data.customer
-    }
-  }
 }
