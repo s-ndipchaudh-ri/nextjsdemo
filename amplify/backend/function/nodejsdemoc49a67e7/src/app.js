@@ -12,76 +12,27 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-
+const cors = require('cors')
 // declare a new express app
 const app = express()
+
+require("./dbConnection").connectDB();
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "*")
+  res.header("Access-Control-Allow-Origin", "")
+  res.header("Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent")
+  res.header("Access-Control-Allow-Methods", "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT")
   next()
 });
+app.use(cors())
+app.options('/*',cors())
 
-
-/**********************
- * Example get method *
- **********************/
-
-app.get('/users', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
-
-app.get('/users/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
-
-/****************************
-* Example post method *
-****************************/
-
-app.post('/users', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-app.post('/users/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example put method *
-****************************/
-
-app.put('/users', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-app.put('/users/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example delete method *
-****************************/
-
-app.delete('/users', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
-
-app.delete('/users/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
-
+// import all routes
+const Routes = require('./routes')
+app.use(Routes)
 app.listen(3000, function() {
     console.log("App started")
 });
